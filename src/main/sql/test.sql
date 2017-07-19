@@ -37,6 +37,13 @@ INSERT  INTO
   (13,1,100),
   (13,2,100),
   (13,3,100)
-
+-- MySQL大数据量分页性能优化
 SELECT * FROM product a JOIN (select id from product limit 866613, 20) b ON a.ID = b.id
+-- 简单触发器示例
+CREATE TRIGGER lasttime
+AFTER UPDATE ON myaccount.credit_card
+FOR EACH ROW
+BEGIN
+UPDATE seckill SET a=1 WHERE id = new/old.id ;
+END;
 
