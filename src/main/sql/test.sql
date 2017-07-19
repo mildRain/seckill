@@ -37,3 +37,6 @@ INSERT  INTO
   (13,1,100),
   (13,2,100),
   (13,3,100)
+
+SELECT * FROM product a JOIN (select id from product limit 866613, 20) b ON a.ID = b.id
+
